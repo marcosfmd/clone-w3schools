@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500 & display=swap');
+
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-transparent: rgba(0,0,0,0);
+  --color-button-text: #04AA6D;
+
+  --font-padrao: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-padrao);
+  min-width: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-inline: 3rem;
+  cursor: pointer;
+}
+
+header ul li img {
+  width: 40px;
+}
+
+header ul li {
+  padding: 32px 10px;
+}
+
+header ul li:hover {
+  background-color: var(--color-button-text);
+}
+
+header ul li a {
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+header ul li a:hover {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+header div a {
+  border-radius: 35px;
+  margin-left: 2.7rem;
+  padding: 10px 10px;
+}
+
+header div a:nth-child(1) {
+  background-color: #FFC0C7;
+  padding: 12px 20px;
+}
+
+header div a:last-child {
+  background-color: rgb(10, 126, 83);
+  color: var(--color-white);
+  margin-right: 3rem;
+  padding: 12px 40px;
+}
+
+header div a:hover {
+  background-color: var(--color-button-text);
+  color: var(--color-white);
+}
+
+.nav-bar {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #282A35;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem; 
+}
+
+.nav-bar ul li {
+  padding: 1.2rem 1rem;
+}
+
+.nav-bar ul li a{
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.nav-bar ul li:hover {
+  background-color: #07080c;
+}
+
+.nav-bar ul li a i{
+  color: var(--color-white);
+  font-size: 1.8rem;
+}
+
+.nav-bar div a i{
+  color: var(--color-white);
+  font-size: 1.8rem;
+  letter-spacing: 2rem;
+}
+
+.nav-bar div i:hover {
+  background-color: #1A1B25;
+  padding: 1.3rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-area: 
+  'sidebar sidebar'
+  'content content'
+  'advertisements advertisements'
+}
+
+.side-bar {
+  height: 100%;
+  width: 100%;
+  grid-area: sidebar sidebar;
+  background-color: #E7E9EB;
+  line-height: 2.5rem;
+  padding-inline-start: 2rem;
+  padding-block-start: 2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.content {
+  grid-area: content content;
+}
+
+.content header {
+  display: block;
+  flex-direction: column;
+  height: 14rem;
+  border-bottom: 1px solid #ccc;
+  margin-inline: 2rem;
+}
+
+.content header h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  margin-block: 2.5rem;
+  padding-top: 1rem;
+}
+
+.content header button {
+  background-color: var(--color-button-text);
+  color: var(--color-white);
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  margin-inline: 5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.content header button:last-child {
+  float: right;
+  
+}
+
+.content header button:hover {
+  background-color: #1f6311;
+  
+}
+
+.content header i {
+  color: var(--color-white);
+  margin-inline: .2rem ;
+}
+
+
+.content .explanation {
+  display: block;
+  flex-direction: column;
+  height: 22rem;
+  border-bottom: 1px solid #ccc;
+  margin-inline: 2rem;
+  margin-block: 2rem;
+}
+
+.content .explanation:last-child {
+  height: 31rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.content .explanation h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-block: 2.5rem;
+  padding-top: 1rem;
+}
+
+.content .explanation p {
+  line-height: 2.4rem;
+}
+
+.content .explanation code {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  margin-block: 2.5rem;
+  padding-top: 1rem;
+}
+
+.content .explanation ul li {
+  line-height: 2.5rem;
+}
+
+.advertisements {
+  grid-area: advertisements advertisements;
+  margin-inline: 2rem;
+  padding-top: 1.7rem;
+}
+
+.advertisements img {
+  height: 180px;
+  display: block;
+  margin-block: 1rem;
+}
+
+footer {
+  height: 100px;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #ccc;
+}
